@@ -1,0 +1,12 @@
+- name: A List where multiple variables are passed in an item of list
+user:
+name: "{{ item.name }}"
+uid: "{{ item.uid }}"
+groups: "{{ item.groups }}"
+state: present
+with_items:
+- { name: sample1, uid: 2001, groups: "HR" }
+- { name: sample2, uid: 2002, groups: "Finance" }
+- tom
+- sam
+- sai
